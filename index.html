@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+      }
+      button:hover {
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.478);
+      }
+      button:active {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button onclick="changecolor()">CLICK ME </button>
+    </div>
+    <script>
+      var index = 0;
+      function changecolor() {
+        var colors = [
+          "pink",
+          "#95e6ea",
+          "#95eabb",
+          "#eae695",
+          "#f0a481",
+          "#dc88dc",
+        ];
+        document.getElementsByTagName("body")[0].style.background =
+          colors[index++];
+        if (index > colors.length - 1) {
+          index = 0;
+        }
+      }
+    </script>
+  </body>
+</html>
